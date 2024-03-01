@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "8fe866a8-1af1-41f5-9536-753d0c0234ee",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26921853",
+		"_collection_link": "https://gold-flare-141753.postman.co/workspace/Ocommerce~227baddf-6ded-4964-bfdb-73f20804b4bb/collection/26921853-8fe866a8-1af1-41f5-9536-753d0c0234ee?action=share&source=collection_link&creator=26921853"
+	},
+	"item": [
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "get tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "create task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "     {\n          \"user_id\": 1,\n          \"title\": \"Task 1\",\n          \"description\": \"Description of Task 1\",\n          \"status\": \"pending\"\n      }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/users"
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "     {\n          \"user_id\": 1,\n          \"title\": \"Task 1\",\n          \"description\": \"Description of Task 1\",\n          \"status\": \"pending\"\n      }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/users/{id}"
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/users/{id}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/users"
+			},
+			"response": []
+		},
+		{
+			"name": "create users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8080/users"
+			},
+			"response": []
+		},
+		{
+			"name": "update users",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "      {\n          \"name\": \"John Smith\",\n          \"email\": \"john.smith@example.com\",\n          \"password\": \"newpassword\"\n      }"
+				},
+				"url": "http://localhost:8080/users/{id}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete users",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/users/{id}"
+			},
+			"response": []
+		}
+	]
+}
